@@ -74,33 +74,77 @@ header .infoButton {
     top: 50%;
     left: 50%;
     transform-origin: 50% 50%;
-    animation: bloom 10s infinite;
 }
 
 .petal:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(30deg) translateY(-100px);
+    animation: bloom1 10s infinite;
 }
 .petal:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(90deg) translateY(-100px);
+    animation: bloom2 10s infinite;
 }
 .petal:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(150deg) translateY(-100px);
+    animation: bloom3 10s infinite;
 }
 .petal:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(210deg) translateY(-100px);
+    animation: bloom4 10s infinite;
 }
 .petal:nth-child(5) {
-    transform: translate(-50%, -50%) rotate(270deg) translateY(-100px);
+    animation: bloom5 10s infinite;
 }
 .petal:nth-child(6) {
-    transform: translate(-50%, -50%) rotate(330deg) translateY(-100px);
+    animation: bloom6 10s infinite;
 }
 
-@keyframes bloom {
+@keyframes bloom1 {
     0%, 100% {
-        transform: translate(-50%, -50%) scale(0.1);
+        transform: translate(-50%, -50%) rotate(30deg) scale(0.1);
     }
     50% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) rotate(30deg) translateY(-100px) scale(1);
+    }
+}
+
+@keyframes bloom2 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(90deg) scale(0.1);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-100px) scale(1);
+    }
+}
+
+@keyframes bloom3 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(150deg) scale(0.1);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(150deg) translateY(-100px) scale(1);
+    }
+}
+
+@keyframes bloom4 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(210deg) scale(0.1);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(210deg) translateY(-100px) scale(1);
+    }
+}
+
+@keyframes bloom5 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(270deg) scale(0.1);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-100px) scale(1);
+    }
+}
+
+@keyframes bloom6 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(330deg) scale(0.1);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(330deg) translateY(-100px) scale(1);
     }
 }
