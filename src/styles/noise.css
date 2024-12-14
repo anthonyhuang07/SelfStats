@@ -1,0 +1,135 @@
+*,
+*:after,
+*:before {
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    margin: 0;
+    font-family: "Lexend", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: linear-gradient(to bottom, #036730, #00210F);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    width: 100%;
+    background-color: #323232;
+    color: white;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    h1 {
+        font-size: 1.5em;
+        margin: 0.5rem;
+        font-weight: 400;
+    }
+
+    h1:active {
+        filter: brightness(0.85);
+    }
+
+    .infoButton {
+        font-size: 1.5em;
+        color: white;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .infoButton:active {
+        filter: brightness(0.85);
+    }
+}
+
+.noiseLevel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#noiseStatusDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    margin-top: 2rem;
+}
+
+#noiseStatus {
+    font-size: 2em;
+    font-weight: 300;
+    color: #00E063;
+}
+
+#decibelMeter {
+    font-size: 4em;
+}
+
+#decibels {
+    font-size: 0.5em;
+    font-weight: 300;
+    margin-left: 0.5rem;
+}
+
+.ticks {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.tick {
+    height: 70px;
+    width: 10px;
+    border-radius: 0.15rem;  
+    background-color: #11743E;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.tick:nth-child(11) {
+    height: 80px;
+}
+
+.tickLabels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    position: relative;
+}
+
+.tickLabel {
+    position: absolute;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+

@@ -34,12 +34,13 @@ permalink: /
 <body>
 
   <header>
-    <h1>SelfStats</h1>
+    <a href="/"><h1>SelfStats</h1></a>
+    <button class="infoButton"><i class="fa-solid fa-circle-question"></i></button>
   </header>
 
   <div class="profile">
     <img src="/assets/default.jpg" alt="Profile Picture">
-    <h1>Good Afternoon, User</h1>
+    <h1 id="greeting">Good Afternoon, <span contenteditable="true" id="username">User</span></h1>
   </div>
 
   <div class="dashboard">
@@ -50,8 +51,8 @@ permalink: /
     </div>
 
     <div class="app">
-      <i class="fa-solid fa-ear-listen"
-        style="background-image: linear-gradient(135deg, hsl(37, 100%, 60%), hsl(50, 98%, 75%));"></i>
+      <a href="/src/pages/noise.html"> <i class="fa-solid fa-ear-listen"
+          style="background-image: linear-gradient(135deg, hsl(37, 100%, 60%), hsl(50, 98%, 75%));"></i></a>
       <h2>Noise Level</h2>
     </div>
 
@@ -67,6 +68,15 @@ permalink: /
       <h2>BMI Calculator</h2>
     </div>
   </div>
+
+  <div id="infoModal" class="modal">
+    <div class="modalContent">
+      <span class="closeButton">&times;</span>
+      <h2>What is SelfStats?</h2>
+      <p><br>SelfStats is your personal hub for simple, everyday health tools. It provides you with easy-to-use tools to monitor and improve your health.<br><br>Made by Anthony Huang for Hack the Ridge 2024 using HTML, CSS & JavaScript.</p>
+    </div>
+  </div>
+
   <script src="/src/scripts/index.js"></script>
 </body>
 

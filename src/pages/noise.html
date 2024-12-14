@@ -1,0 +1,77 @@
+<!-- ---
+permalink: /noise/
+--- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Your personal hub for simple, everyday health tools.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SelfStats - Noise Level</title>
+    <!-- Embeds -->
+    <meta content="SelfStats" property="og:title" />
+    <meta content="Your personal hub for simple, everyday health tools." property="og:description" />
+    <meta content="https://selfstats.xyz" property="og:url" />
+    <meta content="/assets/favicons/web-app-manifest-512x512.png" property="og:image" />
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SelfStats" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/src/styles/noise.css">
+    <script src="https://kit.fontawesome.com/ebba275678.js" crossorigin="anonymous"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <h1>SelfStats</h1>
+        </a>
+        <button class="infoButton"><i class="fa-solid fa-circle-question"></i></button>
+    </header>
+
+    <div class="noiseLevel">
+        <div class="ticks">
+            <div class="tick" style="left: 0%;"></div>
+            <div class="tick" style="left: 5.88%;"></div>
+            <div class="tick" style="left: 11.76%;"></div>
+            <div class="tick" style="left: 17.64%;"></div>
+            <div class="tick" style="left: 23.52%;"></div>
+            <div class="tick" style="left: 29.41%;"></div>
+            <div class="tick" style="left: 35.29%;"></div>
+            <div class="tick" style="left: 41.17%;"></div>
+            <div class="tick" style="left: 47.05%;"></div>
+            <div class="tick" style="left: 52.94%;"></div>
+            <div class="tick" style="left: 58.82%;"></div>
+            <div class="tick" style="left: 64.70%;"></div>
+            <div class="tick" style="left: 70.58%;"></div>
+            <div class="tick" style="left: 76.47%;"></div>
+            <div class="tick" style="left: 82.35%;"></div>
+            <div class="tick" style="left: 88.23%;"></div>
+            <div class="tick" style="left: 94.11%;"></div>
+            <div class="tick" style="left: 100%;"></div>
+        </div>
+        <div class="tickLabels">
+            <div class="tickLabel" style="left: 0%;">30</div>
+            <div class="tickLabel" style="left: 55.5%;">80</div>
+            <div class="tickLabel" style="left: 91%;">120</div>
+        </div>
+        <div id="noiseStatusDiv">
+            <div id="noiseStatus">OK</div>
+            <div id="decibelMeter">0<span id="decibels">dB</span></div>
+        </div>
+    </div>
+
+    <script src="/src/scripts/noise.js"></script>
+</body>
+
+</html>
