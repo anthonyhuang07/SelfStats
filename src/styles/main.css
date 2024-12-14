@@ -42,11 +42,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
 
     h1 {
         font-size: 1.5em;
-        margin: 0.5rem;
+        margin: 0.75rem;
+        margin-left: 1rem;
         font-weight: 400;
     }
 
@@ -60,6 +60,7 @@ header {
         cursor: pointer;
         background: none;
         border: none;
+        margin-right: 1rem;
     }
 
     .infoButton:active {
