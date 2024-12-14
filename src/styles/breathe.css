@@ -1,0 +1,106 @@
+*,
+*:after,
+*:before {
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    margin: 0;
+    font-family: "Lexend", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: #333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    width: 100%;
+    background-color: #323232;
+    color: white;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin: 0.75rem;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+header .infoButton {
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-right: 1rem;
+}
+
+.breathe-animation {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.petal {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(64, 224, 208, 0.7);
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    animation: bloom 10s infinite;
+}
+
+.petal:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(30deg) translateY(-100px);
+}
+.petal:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(90deg) translateY(-100px);
+}
+.petal:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(150deg) translateY(-100px);
+}
+.petal:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(210deg) translateY(-100px);
+}
+.petal:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(270deg) translateY(-100px);
+}
+.petal:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(330deg) translateY(-100px);
+}
+
+@keyframes bloom {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

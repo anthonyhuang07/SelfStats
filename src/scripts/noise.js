@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const noiseStatus = document.getElementById('noiseStatus');
   const ticks = document.querySelectorAll('.tick');
   const tickLabels = document.querySelectorAll('.tickLabel');
+  const infoButton = document.querySelector('.infoButton');
+  const modal = document.getElementById('infoModal');
 
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -61,5 +63,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
   } catch (err) {
     console.error('Error accessing microphone:', err);
+    noiseStatus.innerText = 'Please allow microphone access.';
   }
+
+  infoButton.addEventListener('click', () => {
+    modal.style.display = 'block';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  });
 });

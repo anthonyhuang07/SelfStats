@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const uvIndex = document.getElementById('uvIndex');
   const uvLevel = document.getElementById('uvLevel');
+  const infoButton = document.querySelector('.infoButton');
+  const modal = document.getElementById('infoModal');
 
   // Function to update UV index and level
   const updateUVIndex = (uvValue) => {
@@ -8,19 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (uvValue <= 2) {
       uvLevel.innerText = 'Low';
-      document.body.style.background = 'linear-gradient(to bottom, #00E063, #00210F)';
+      document.body.style.background = 'linear-gradient(to bottom, #00E063, #006B3C)';
     } else if (uvValue <= 5) {
       uvLevel.innerText = 'Moderate';
-      document.body.style.background = 'linear-gradient(to bottom, #FFD202, #251F00)';
+      document.body.style.background = 'linear-gradient(to bottom, #FFD202, #B8860B)';
     } else if (uvValue <= 7) {
       uvLevel.innerText = 'High';
-      document.body.style.background = 'linear-gradient(to bottom, #FF8C00, #251F00)';
+      document.body.style.background = 'linear-gradient(to bottom, #FF8C00, #B85E00)';
     } else if (uvValue <= 10) {
       uvLevel.innerText = 'Very High';
-      document.body.style.background = 'linear-gradient(to bottom, #FF4500, #251F00)';
+      document.body.style.background = 'linear-gradient(to bottom, #FF4500, #B82E00)';
     } else {
       uvLevel.innerText = 'Extreme';
-      document.body.style.background = 'linear-gradient(to bottom, #9400D3, #251F00)';
+      document.body.style.background = 'linear-gradient(to bottom, #9400D3, #5E0094)';
     }
   };
 
@@ -47,13 +49,21 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       (error) => {
         console.error('Error getting location:', error);
-        // Fallback UV index value
-        updateUVIndex(0);
+        uvLevel.innerText = 'Please allow location access.';
       }
     );
   } else {
     console.error('Geolocation is not supported by this browser.');
-    // Fallback UV index value
-    updateUVIndex(0);
+    uvLevel.innerText = 'Please allow location access.';
   }
+
+  infoButton.addEventListener('click', () => {
+    modal.style.display = 'block';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  });
 });

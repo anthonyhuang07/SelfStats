@@ -150,26 +150,12 @@ header {
 
 .modalContent {
     background-color: #fefefe;
-    margin: 10% auto;
+    margin: 7.5% auto;
     padding: 20px;
     width: 80%;
     max-width: 600px;
     text-align: center;
     border-radius: 0.5rem;
-}
-
-.closeButton {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.closeButton:hover,
-.closeButton:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /* #region Mobile Optimization */

@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const profileImg = document.querySelector('.profile img');
-  const settingsButton = document.querySelector('.settingsButton');
   const infoButton = document.querySelector('.infoButton');
   const modal = document.getElementById('infoModal');
-  const closeButton = document.querySelector('.closeButton');
   const username = document.getElementById('username');
 
   // Load saved image from localStorage
@@ -39,11 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   infoButton.addEventListener('click', () => {
     modal.style.display = 'block';
   });
-
-  closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
+  
   window.addEventListener('click', (event) => {
     if (event.target == modal) {
       modal.style.display = 'none';
