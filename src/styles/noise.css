@@ -65,6 +65,9 @@ header {
         filter: brightness(0.85);
     }
 }
+
+/* Noise Status */
+
 .noiseLevel {
     display: flex;
     flex-direction: column;
@@ -95,6 +98,8 @@ header {
     font-weight: 300;
     margin-left: 0.5rem;
 }
+
+/* Noise Bar */
 
 .ticks {
     width: 100%;
@@ -131,6 +136,8 @@ header {
     font-size: 1em;
     font-weight: 300;
 }
+
+/* Help Menu */
 
 .modal {
     display: none;

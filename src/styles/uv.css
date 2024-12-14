@@ -90,6 +90,8 @@ header {
     font-weight: 300;
 }
 
+/* Help Menu */
+
 .modal {
     display: none;
     position: fixed;

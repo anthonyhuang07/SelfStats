@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const modal = document.getElementById('infoModal');
 
   try {
+
+    // Request mic access, allow audio manipulation
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const analyser = audioContext.createAnalyser();
@@ -16,11 +18,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     analyser.smoothingTimeConstant = 0.8;
     analyser.fftSize = 1024;
 
+    // Connect mic to analyzer
+
     microphone.connect(analyser);
     analyser.connect(scriptProcessor);
     scriptProcessor.connect(audioContext.destination);
 
     let lastUpdateTime = 0;
+
+    // Convert frequency to decibels
 
     scriptProcessor.onaudioprocess = () => {
       const array = new Uint8Array(analyser.frequencyBinCount);
@@ -29,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const average = values / array.length;
       const decibels = Math.round(average);
 
-      // Update ticks continuously
+      // Noise bar code
       let isLoud = false;
       ticks.forEach((tick, index) => {
         const tickValue = 30 + index * 5;
@@ -66,6 +72,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     noiseStatus.innerText = 'Please allow microphone access.';
   }
 
+  // Info menu
+  
   infoButton.addEventListener('click', () => {
     modal.style.display = 'block';
   });

@@ -88,6 +88,8 @@ header {
     }
 }
 
+/* Apps */
+
 .dashboard {
     margin-top: 2rem;
     display: grid;
@@ -133,6 +135,8 @@ header {
         }
     }
 }
+
+/* Help Menu */
 
 .modal {
     display: none;

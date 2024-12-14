@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoButton = document.querySelector('.infoButton');
   const modal = document.getElementById('infoModal');
 
-  // Function to update UV index and level
+  // Update UV index and level
   const updateUVIndex = (uvValue) => {
     uvIndex.innerText = uvValue.toFixed(1);
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Function to fetch UV index from weather API
+  // Fetch UV index from weather API
   const fetchUVIndex = (latitude, longitude) => {
     const apiKey = '5954ba0507c84dc9b42205019241412'; // Replace with your weather API key
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}`;
@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     uvLevel.innerText = 'Please allow location access.';
   }
 
+  // Info Menu
   infoButton.addEventListener('click', () => {
     modal.style.display = 'block';
   });

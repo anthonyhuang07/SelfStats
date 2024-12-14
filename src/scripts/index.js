@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     username.innerText = savedUsername;
   }
 
+  // Upload new PFP
   profileImg.addEventListener('click', () => {
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
@@ -34,10 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     fileInput.click();
   });
 
+  // Info Menu Actions
+  
   infoButton.addEventListener('click', () => {
     modal.style.display = 'block';
   });
-  
+
   window.addEventListener('click', (event) => {
     if (event.target == modal) {
       modal.style.display = 'none';
