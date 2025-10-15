@@ -94,8 +94,8 @@ header {
     margin-top: 2rem;
     display: grid;
     grid-template-areas:
-        "app app app app"
-        "app app app app";
+        "app app app"
+        "app app app";
     justify-content: center;
     gap: 20px;
 
